@@ -1,0 +1,275 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0e0e0e;
+  --ink: #e8e8e8;
+  --muted: #a4a4a4;
+  --rule: #222;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-size: 0.8rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  animation: fadeIn 0.4s ease;
+}
+
+/* HEADER */
+
+header {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+header h1 {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+/* MAIN */
+
+main {
+  padding: 4rem 3rem;
+  max-width: 680px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 1.5rem 3rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+/* INDEX */
+
+.bio {
+  margin-bottom: 4rem;
+}
+
+.bio p {
+  font-family: "IBM Plex Serif", serif;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.bio p em {
+  font-style: italic;
+  color: #888;
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.links a:hover {
+  color: var(--ink);
+}
+
+.work-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.project:last-of-type {
+  border-bottom: 1px solid var(--rule);
+}
+
+.project-name {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.project-meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  transition: color 0.15s;
+}
+
+.project:hover .project-meta {
+  color: var(--ink);
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* GRID ITEM IMAGE */
+
+.work-section {
+  margin-bottom: 4rem;
+}
+
+.work-section-title {
+  font-size: 1.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.grid-item {
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item-image {
+  width: 100%;
+  height: 220px;
+  background: var(--rule);
+  overflow: hidden;
+}
+
+.grid-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.grid-item-info {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.grid-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.grid-item-title {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink);
+}
+
+.grid-item-date {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.grid-item-desc {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  header,
+  main,
+  footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  main {
+    padding-top: 2.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
