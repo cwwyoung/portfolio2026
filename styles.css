@@ -44,7 +44,7 @@ header h1 {
 
 main {
   padding: 4rem 3rem;
-  max-width: 680px;
+  max-width: 780px;
 }
 
 /* FOOTER */
@@ -218,6 +218,7 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 0.1rem;
 }
 
 .grid-item-title {
