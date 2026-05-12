@@ -33,9 +33,9 @@ header {
 }
 
 header h1 {
-  font-family: "IBM Plex Serif", serif;
+  font-family: "Host Grotesk", serif;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 3rem;
   letter-spacing: 0.02em;
   color: var(--ink);
 }
@@ -74,6 +74,7 @@ footer p {
   font-weight: 300;
   line-height: 1.6;
   color: var(--ink);
+  margin-bottom: 1rem;
 }
 
 .bio p em {
@@ -89,7 +90,7 @@ footer p {
 }
 
 .links a {
-  font-size: 0.72rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
   color: var(--muted);
   text-decoration: none;
