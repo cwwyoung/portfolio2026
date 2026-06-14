@@ -265,7 +265,6 @@ footer p {
   width: 600px;
   height: 800px;
   border: none;
-  pointer-events: none;
 }
 .template-info {
   display: flex;
