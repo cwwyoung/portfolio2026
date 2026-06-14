@@ -84,7 +84,7 @@ footer p {
 
 .links ul {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   margin-bottom: 5rem;
   flex-wrap: wrap;
   list-style: none;
@@ -241,6 +241,40 @@ footer p {
   font-size: 0.8rem;
   line-height: 1.5;
   color: var(--muted);
+}
+
+/* EMAIL PAGE */
+.template-preview {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0;
+}
+
+.template-preview:last-of-type {
+  border-bottom: 1px solid var(--rule);
+}
+.template-frame-wrap {
+  width: 600px;
+  height: 800px;
+  overflow: hidden;
+  transform: scale(0.6);
+  transform-origin: top left;
+  margin-bottom: calc(-800px * 0.4);
+}
+
+.template-frame-wrap iframe {
+  width: 600px;
+  height: 800px;
+  border: none;
+  pointer-events: none;
+}
+.template-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.template-preview p {
+  font-size: 0.8rem;
 }
 
 /* ANIMATIONS */
